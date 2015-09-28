@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1#title Welcome to #{title}
+
+  #canvas
+
+    each book, i in (function(){return new Array(49)})()
+      input(
+      class="zombie zombie-#{i} anim-walk-#{i}"
+      type='checkbox'
+      name=i)
+
+    h2#message You Win
